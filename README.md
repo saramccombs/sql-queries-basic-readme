@@ -156,6 +156,31 @@ id  name        age    breed       owner_id
 2   Hana        1      Tabby       1 
 ```   
 
+### `GROUP BY`
+
+`GROUP BY` modifier allows us to gather all rows that contain information in a specified column through a `SELECT` statement. It is different from `ORDER BY` in that it doesn't change the order in which the results are returned. `GROUP BY` also allows you to perform additional functions on the data, like `SUM`, `COUNT`, `AVG`, etc.
+
+A boiler plate `GROUP BY` statement looks like this:
+
+```sql
+SELECT column_name FROM table_name WHERE condition GROUP BY column_name;
+```
+
+So let's take our cat data, and return the number of cats for each breed:
+
+```sql
+SELECT count(id), breed FROM cats GROUP BY breed;
+```
+
+That returns something that looks like this:
+Count | Breed
+----- | -------
+  1   | American Shorthair
+  1   | Calico
+  1   | Scottish Fold
+  2   | Tabby
+
+
 ### `LIMIT`
 
 What if we want the oldest cat? If we want to select extremes from a database table––for example, the employee with the highest paycheck or the patient with the most recent appointment––we can use `ORDER BY` in conjunction with `LIMIT`. 
