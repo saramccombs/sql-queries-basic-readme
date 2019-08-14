@@ -297,7 +297,7 @@ where we couldn't just tally up the number of cats *grouped by*
 breed? That's where — you guessed it! — `GROUP BY` comes in handy.
 
 ``` sql
-SELECT breed COUNT(breed) FROM cats GROUP BY breed;
+SELECT breed, COUNT(breed) FROM cats GROUP BY breed;
 ```
 
 This should return
