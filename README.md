@@ -315,7 +315,7 @@ GROUP BY is a great function for aggregating results into different
 segments — you can even use it on multiple columns!
 
 ```sql
-SELECT breed, owner_id COUNT(breed) FROM cats GROUP BY breed, owner_id;
+SELECT breed, owner_id, COUNT(breed) FROM cats GROUP BY breed, owner_id;
 ```
 
 ``` bash
